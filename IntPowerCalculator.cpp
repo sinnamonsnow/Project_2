@@ -9,6 +9,7 @@ int main()
 	long expo;
 	cout <<"Enter the base and integer exponent of the power => ";
 	cin>>base>>expo;
+	num=base;
 	cout<<setprecision(5)<<fixed<<base<<"^"<<expo<<" = ";
 	if(base==0)
 	{
@@ -28,24 +29,19 @@ int main()
 			else
 				cout<<"-1.00000"<<endl;
 		}
-		else if(base!=0)
+		else
 		{
 			if(expo==0)
 				cout<<"1.00000"<<endl;
-			else if(expo<0)
+			else
 			{
-				num=base;
 				for(int i=2;i<=abs(expo);i++)
 					num=num*base;
-				cout<<1/num<<endl;
+				if (expo>0)
+					cout<<num<<endl;
+				else
+					cout<<1/num<<endl;
 			}
-			else
-				{
-				num=base;
-				for(int i=2;i<=expo;i++)
-					num=num*base;
-				cout<<num<<endl;
-				}
 		}
 	}
 
