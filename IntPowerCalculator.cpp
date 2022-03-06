@@ -14,7 +14,7 @@ int main()
 	if(base==0)
 	{
 		if(expo<=0)
-			cout<<"nan"<<endl;
+			cout<<NAN<<endl;
 		else
 			cout<<base<<endl;
 	}
